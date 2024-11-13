@@ -9,7 +9,9 @@
     "test": "ng test --browsers ChromeHeadless --watch=false",
     "build-namecheap": "ng build --base-href https://abraham2748.com/",
     "build-cloudflare": "ng build --base-href https://angular-expert-07.pages.dev",
-    "deploy-cloudflare": "npm run build-cloudflare && wrangler pages deploy dist/angular-expert-07/browser"
+    "deploy-cloudflare": "npm run build-cloudflare && wrangler pages deploy dist/angular-expert-07/browser",
+    "build-firebase": "ng build --base-href https://angular-expert-07.web.app",
+    "deploy-firebase": "npm run build-firebase && firebase deploy"
   },
   "private": true,
   "dependencies": {
