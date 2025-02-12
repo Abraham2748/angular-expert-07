@@ -14,3 +14,4 @@ jobs:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_ANGULAR_EXPERT_07_3093E }}
           projectId: angular-expert-07-3093e
+          channelId: live
