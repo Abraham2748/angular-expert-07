@@ -6,7 +6,8 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test --watch=false --browsers ChromeHeadless"
+    "test": "ng test --watch=false --browsers ChromeHeadless",
+    "build-ghpages": "ng build --base-href https://abraham2748.github.io/angular-expert-07/"
   },
   "private": true,
   "dependencies": {
