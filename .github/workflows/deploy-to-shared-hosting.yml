@@ -17,10 +17,13 @@ jobs:
           node-version: "22.14.0"
 
       - name: Instalar dependencias
-        run: npm install
+        run: npm ci
 
-      - name: Construir aplicación
+      - name: Construir la aplicación
         run: npm run build
+
+      - name: Probar la aplicación
+        run: npm run test
 
       - name: Desplegar mediante FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
