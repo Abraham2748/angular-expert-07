@@ -1,0 +1,33 @@
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v4
+
+      - name: Configurar NodeJS
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.14.0"
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Construir la aplicación
+        run: npm run build
+
+      - name: Probar la aplicación
+        run: npm run test
+
+      - name: Desplegar a Github Pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist/angular-expert-07/browser
+          token: ${{ secrets.PAT_VALUE }}
