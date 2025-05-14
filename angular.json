@@ -29,6 +29,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "https://abraham2748.github.io/angular-expert-07/",
               "budgets": [
                 {
                   "type": "initial",
@@ -82,13 +83,7 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy",
-          "defaultConfiguration": "production",
-          "configurations": {
-            "production": {
-              "baseHref": "https://abraham2748.github.io/angular-expert-07/"
-            }
-          }
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
